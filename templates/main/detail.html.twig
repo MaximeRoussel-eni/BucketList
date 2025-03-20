@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détail de Souhait{% endblock %}
+
+{% block body %}
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="card shadow p-4" style="width: 800px;">
+            <h1 class="text-center mb-4">{{ wish.title }} ✅</h1>
+
+            <div class="wish-details">
+                <p class="lead"><strong>Description : </strong>{{ wish.description }}</p>
+                <p><strong>Auteur : </strong>{{ wish.author }}</p>
+                <p><strong>Catégorie : </strong>{{ wish.category.name }}</p>
+            </div>
+
+            <a href="{{ path('app_main_list') }}" class="btn btn-secondary w-100 mt-4">Retour a la liste des souhaits</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}{% endblock %}

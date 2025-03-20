@@ -1,0 +1,178 @@
+/* 🌟 Général */
+body {
+    background-color: #fff1e7;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+/* 🌟 En-tête */
+#header {
+    background-color: #a3a68e;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* 🌟 Pied de page */
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #eddcd3;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* 🌟 Formulaire et carte */
+#formulaire {
+    background-color: #a3a68e;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%; /* Utiliser toute la largeur possible */
+    max-width: 800px; /* Limite la largeur maximale pour les grands écrans */
+    margin: 0 auto; /* Centrer la carte horizontalement */
+    overflow: hidden; /* Empêche le débordement horizontal */
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Utilise toute la largeur disponible */
+    max-width: 100%; /* S'adapte à la largeur de son conteneur */
+    margin: auto;
+}
+
+/* 🌟 Améliorer la réactivité pour les écrans plus petits */
+@media (max-width: 768px) {
+    .card {
+        max-width: 100%; /* Réduit la carte à 100% de la largeur sur les petits écrans */
+        padding: 15px; /* Réduit l'espacement intérieur */
+    }
+
+    #formulaire {
+        padding: 15px; /* Réduit également l'espacement intérieur */
+        max-width: 100%; /* Assure que la carte occupe toute la largeur sur les petits écrans */
+    }
+}
+
+
+.card h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.card input,
+.card textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.card input:focus,
+.card textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+/* 🌟 Boutons */
+/* 🌟 Bouton Détail : Couleur plus sobre */
+.detail-btn,
+.btn-danger {
+    width: 150px; /* Largeur uniforme pour les deux boutons */
+    padding: 8px 16px; /* Taille du bouton */
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Effet de transition doux */
+    text-align: center; /* Centrer le texte du bouton */
+}
+
+/* 🌟 Bouton Détail : Gris clair pour un effet sobre */
+.detail-btn {
+    background-color: #6c757d; /* Gris clair */
+    color: white;
+    font-weight: normal;
+    text-shadow: none; /* Retirer l'ombre pour un effet plus épuré */
+}
+
+.detail-btn:hover {
+    background-color: #5a6268; /* Gris plus foncé au survol */
+    transform: scale(1.05); /* Légère augmentation de la taille */
+}
+
+/* 🌟 Bouton Supprimer : Moins imposant */
+.btn-danger {
+    background-color: #dc3545; /* Rouge classique pour le bouton supprimer */
+    color: white;
+    font-size: 0.9em; /* Taille plus petite */
+}
+
+.btn-danger:hover {
+    background-color: #c82333; /* Rouge plus foncé au survol */
+}
+
+/* 🌟 Autres styles généraux */
+.wishes-table td,
+.wishes-table th {
+    padding: 10px;
+    text-align: left;
+}
+
+.wishes-table th {
+    background-color: #a3a68e;
+    color: white;
+}
+
+.wishes-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.9em;
+    color: white;
+}
+
+.status-badge.published {
+    background-color: #28a745;
+}
+
+.status-badge.not-published {
+    background-color: #dc3545;
+}
+
+/* 🌟 Table responsive et centrage pour mieux s'adapter aux petits écrans */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.wishes-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.wishes-table td {
+    word-wrap: break-word;
+}

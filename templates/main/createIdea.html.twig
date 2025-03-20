@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Créer un souhait{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <div class="card shadow-lg p-4 mx-auto" style="max-width: 600px;">
+            <h2 class="text-center mb-4">🌟 Créer un nouveau souhait</h2>
+
+            {{ form_start(form, {'attr': {'class': 'needs-validation'}}) }}
+
+            <div class="mb-3">
+                <label for="{{ form.title.vars.id }}" class="form-label">📌 Titre</label>
+                {{ form_widget(form.title, { 'attr': {'class': 'form-control'} }) }}
+                <div class="text-danger small">{{ form_errors(form.title) }}</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="{{ form.description.vars.id }}" class="form-label">📝 Description</label>
+                {{ form_widget(form.description, { 'attr': {'class': 'form-control', 'rows': 4} }) }}
+                <div class="text-danger small">{{ form_errors(form.description) }}</div>
+            </div>
+
+            <!-- Bouton Publier bien aligné -->
+            <div class="mb-3 d-flex align-items-center">
+                {{ form_widget(form.isPublished, { 'attr': {'class': 'form-check-input me-2', 'style': 'width: 18px; height: 18px;'} }) }}
+                <label class="form-check-label m-0" for="{{ form.isPublished.vars.id }}">📢 Ce souhait est réalisé ?</label>
+                <div class="text-danger small">{{ form_errors(form.isPublished) }}</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="{{ form.Category.vars.id }}" class="form-label">📂 Catégorie</label>
+                {{ form_widget(form.Category, { 'attr': {'class': 'form-select'} }) }}
+                <div class="text-danger small">{{ form_errors(form.Category) }}</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">🚀 Créer mon souhait</button>
+
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}
