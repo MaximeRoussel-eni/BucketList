@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tableau de bord{% endblock %}
+
+{% block body %}
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="card shadow p-4" style="width: 800px;">
+            <h2 class="text-center mb-4">📝 Tableau de bord</h2>
+
+            <div class="table-responsive">
+                <table class="wishes-table table">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Titre</th>
+                        <th>Auteur</th>
+                        <th>Réalisé ?</th>
+                        <th>Actions</th>
+                        <th>Détail</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for wish in wishes %}
+
+                            <tr>
+                                <td>{{ wish.id }}</td>
+                                <td>{{ wish.title }}</td>
+                                <td>{{ wish.author }}</td>
+                                <td>
+                                        <span class="status-badge {{ wish.isPublished ? 'published' : 'not-published' }}">
+                                            {{ wish.isPublished ? 'Fait' : 'Non Fait' }}
+                                        </span>
+                                </td>
+                                <td>
+                                    <form action="{{ path('app_main_delete', {id: wish.id}) }}" method="post"
+                                          onsubmit="return confirm('Voulez-vous vraiment supprimer ce souhait ?');">
+                                        <button type="submit" class="btn btn-danger w-100">
+                                            <i class="fas fa-trash-alt"></i> Supprimer
+                                        </button>
+                                    </form>
+                                </td>
+                                <td>
+                                    <a href="{{ path('app_main_detail', {id: wish.id}) }}" class="btn detail-btn w-100">
+                                        <i class="fas fa-edit"></i> Détail
+                                    </a>
+                                </td>
+                            </tr>
+
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
