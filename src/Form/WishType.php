@@ -2,8 +2,8 @@
 
 namespace App\Form;
 
-use list\src\Entity\Category;
-use list\src\Entity\Wish;
+use App\Entity\Category;
+use App\Entity\Wish;
 use Doctrine\ORM\Query\Expr\Select;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;

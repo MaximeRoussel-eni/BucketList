@@ -1,13 +1,13 @@
 <?php
 
-namespace bucket-list\src\Repository;
+namespace App\Repository;
 
-use list\src\Entity\Wish;
+use App\Entity\Wish;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<list\src\Entity\Wish>
+ * @extends ServiceEntityRepository<App\Entity\Wish>
  */
 class WishRepository extends ServiceEntityRepository
 {

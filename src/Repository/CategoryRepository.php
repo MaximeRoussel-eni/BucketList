@@ -2,12 +2,12 @@
 
 namespace App\Repository;
 
-use list\src\Entity\Category;
+use App\Category;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<list\src\Entity\Category>
+ * @extends ServiceEntityRepository<App\Entity\Category>
  */
 class CategoryRepository extends ServiceEntityRepository
 {

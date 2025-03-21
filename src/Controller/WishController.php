@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Controller;
-use list\src\Entity\Wish;
-use list\src\Form\WishType;
-use list\src\Repository\WishRepository;
+use App\Entity\Wish;
+use App\Form\WishType;
+use App\Repository\WishRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request; // ✅ Bon import
 

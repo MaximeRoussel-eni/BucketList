@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use list\src\Repository\WishRepository;
+use App\Repository\WishRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;

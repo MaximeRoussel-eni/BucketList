@@ -1,10 +1,10 @@
 <?php
 
-namespace bucket-list\src\Controller;
+namespace App\Controller;
 
-use list\src\Entity\User;
-use list\src\Form\RegistrationFormType;
-use list\src\Security\UserAuthenticator;
+use App\Entity\User;
+use App\Form\RegistrationFormType;
+use App\Security\UserAuthenticator;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Bundle\SecurityBundle\Security;
